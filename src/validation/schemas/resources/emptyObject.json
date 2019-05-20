@@ -1,0 +1,5 @@
+{
+  "$id": "/resources/emptyObject",
+  "type": "object",
+  "additionalProperties": false
+}

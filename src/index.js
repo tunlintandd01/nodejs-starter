@@ -1,8 +1,9 @@
 const { createApiServer } = require('./app')
+const config = require('./config')
 
 async function main() {
   const app = await createApiServer()
-  app.listen(3000)
+  app.listen(config.port)
 }
 
 main()

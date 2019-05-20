@@ -1,0 +1,23 @@
+{
+  "$id": "getSurveyRequest",
+  "type": "object",
+  "properties": {
+    "query": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": ["id"],
+      "additionalProperties": false
+    },
+    "params": {
+      "$ref": "/resources/emptyObject"
+    },
+    "body": {
+      "$ref": "/resources/emptyObject"
+    }
+  },
+  "additionalProperpties": false
+}
