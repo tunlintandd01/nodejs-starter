@@ -1,0 +1,12 @@
+if: branch =~ ^master$|^development|^release|^ci
+
+lanaguage: node_js
+node_js: 8
+
+install:
+  - npm install
+
+script:
+  - 
+
+os: linux

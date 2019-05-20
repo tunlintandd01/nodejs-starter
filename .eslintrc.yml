@@ -1,0 +1,10 @@
+plugins:
+  - 'eslint-plugin-jest'
+extends:
+  - 'eslint-config-standard'
+  - 'eslint-config-prettier'
+  - 'plugin:jest/recommended'
+rules:
+  'comma-dangle':
+    - 'error'
+    - 'always-multiline'
