@@ -1,16 +1,12 @@
 'use strict'
 
-const express = require('express')
-const cors = require('cors')
+const Koa = require('koa')
 
 module.exports.createApiServer = async options => {
-  const app = express()
+  const app = new Koa()
 
-  app.use(cors())
-  app.use(express.json())
-
-  app.use('/', async (req, res) => {
-    res.json({ pascal: 'lin' })
+  app.use(async ctx => {
+    ctx.body = { pascal: 'lin' }
   })
 
   return app
