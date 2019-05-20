@@ -34,5 +34,11 @@
     "dev": "yarn dev:start",
     "dev:start": "cross-env NODE_ENV=development nodemon | pino-pretty -t SYS:standard",
     "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm test"
+    }
   }
 }
