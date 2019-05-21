@@ -4,7 +4,7 @@
 // https://github.com/alexmingoia/koa-router/issues/246
 function getRouteName(ctx) {
   const matchedRoute = ctx.matched
-    .filter(layer => layer.opts.end === true) // filter the koa-router prefix layer
+    .filter(layer => layer.opts.end === true) // filter koa-router prefix layer
     .find(layer => layer.methods.indexOf(ctx.method) >= 0)
   return matchedRoute ? matchedRoute.name : null
 }
