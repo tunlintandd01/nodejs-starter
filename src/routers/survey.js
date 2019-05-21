@@ -2,7 +2,7 @@
 
 const Router = require('koa-router')
 const router = new Router({
-  prefix: '/api',
+  prefix: '/v1',
 })
 const { getControllerCallback } = require('../utils/route')
 const middlewares = require('../middlewares')

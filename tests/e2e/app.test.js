@@ -13,7 +13,7 @@ afterAll(() => {
 
 test('server test', async () => {
   const res = await supertest(app)
-    .get('/api/survey?id=1')
+    .get('/v1/survey?id=1')
     .expect(200)
   expect(res.body.msg).toEqual('survey')
 })
