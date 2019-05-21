@@ -6,8 +6,10 @@
   "dependencies": {
     "@hapi/boom": "^7.4.2",
     "ajv": "^6.10.0",
+    "axios": "^0.18.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-compose": "^4.1.0",
