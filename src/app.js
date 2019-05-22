@@ -6,6 +6,7 @@ const http = require('http')
 const koaLogger = require('koa-logger')
 const koaBodyParser = require('koa-bodyparser')
 const koaCompose = require('koa-compose')
+const helmet = require('koa-helmet')
 const routers = require('./routers')
 const middlewares = require('./middlewares')
 
@@ -19,6 +20,7 @@ module.exports.createApiServer = async options => {
   app
     .use(koaLogger())
     .use(middlewares.errorHandler)
+    .use(helmet())
     .use(koaBodyParser())
     .use(koaCompose(routes))
 
