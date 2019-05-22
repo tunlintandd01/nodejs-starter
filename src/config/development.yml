@@ -1,0 +1,11 @@
+env: development
+port: 3000
+allowedOrigins:
+  - .hktester.com
+logger:
+  logLevel: debug
+  prettyPrint: true
+services:
+  survey:
+    baseURL: https://surveys-api.hktester.com
+    surveyCookie: hk01_survey_token

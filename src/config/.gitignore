@@ -1,0 +1,2 @@
+credentials.*
+!credentials.development.enc.yml

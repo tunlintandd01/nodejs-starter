@@ -1,0 +1,43 @@
+env:
+  doc: node environment
+  format: ['development', 'staging', 'production']
+  env: NODE_ENV
+  default: development
+port:
+  doc: server port
+  format: Number
+  default: 3000
+allowedOrigins:
+  doc: origin whitelist
+  format: Array
+  default: []
+logger:
+  logLevel:
+    doc: Minimum level of log messages to be printed
+    format: ['fatal', 'error', 'warn', 'info', 'debug', 'trace', 'silent']
+    default: 'info'
+  prettyPrint:
+    doc: This is intended for non-production configurations
+    format: Boolean
+    default: false
+services:
+  survey:
+    baseURL:
+      doc: baseURL for survey service
+      format: url
+      default: null
+    surveyCookie:
+      doc: cookie for survey token
+      format: String
+      default: null
+credentials:
+  survey:
+    apiKey:
+      doc: API Key for survey service
+      format: String
+      default: null
+    token:
+      publicKey:
+        doc: public key for survey jwt
+        format: String
+        default: null

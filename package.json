@@ -7,8 +7,10 @@
     "@hapi/boom": "^7.4.2",
     "ajv": "^6.10.0",
     "axios": "^0.18.0",
+    "convict": "^5.0.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "js-yaml": "^3.13.1",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
@@ -44,6 +46,7 @@
   "scripts": {
     "dev": "yarn dev:start",
     "dev:start": "cross-env NODE_ENV=development nodemon | pino-pretty -t SYS:standard",
-    "test": "jest"
+    "test:dev": "cross-env NODE_ENV=development jest",
+    "test": "yarn test:dev"
   }
 }
