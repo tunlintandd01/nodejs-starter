@@ -5,8 +5,8 @@ describe('survey client', () => {
     const res = await client.healthcheck()
     console.log(res.data)
   })
-  test('test get survey request should be failed', async () => {
-    const res = await client.getSurvey(123)
-    console.log(res.data)
-  })
+  //   test('test get survey request should be failed', async () => {
+  //     const res = await client.getSurvey(123)
+  //     console.log(res.data)
+  //   })
 })
