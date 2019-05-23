@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="auth">auth</button>
+    <script>
+        const options = {
+            appId: 'your-app-id',
+            appVersion: 'your-app-version',
+            service: 'e肚仔',
+            anonymousId: 'this-is-anonymousId',
+            sessionId: 'this-is-sessionId'
+        }
+        const trackerClientOptions = {
+            GA: {
+                trackingId: 'your-GA-tracking-id'
+            },
+            Piwik: {
+                trackingUrl: 'your-piwik-tracking-url',
+                siteId: 99999, // replace with the siteId of your web application
+                userId: 'user-ID',
+                isSPA: true
+            },
+            webviewBridgeEnabled: false // if true, send the events back to the app if app version >= 3.19.0 and the current page is a webview
+        }
+        window.hk01AsyncInit = function() {
+          window.jssdk = new HK01(options, trackerClientOptions);
+        };
+      
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "https://cdn.hk01.com/sdk/hk01/v2.4.0/jssdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'hk01-jssdk'));
+    </script>
+    <script>
+        document.getElementById('auth').click(function(){
+            window.jssdk.auth.login()
+        })
+    </script>
+</body>
+</html>

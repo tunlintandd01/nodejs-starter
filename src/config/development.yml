@@ -7,5 +7,5 @@ logger:
   prettyPrint: true
 services:
   survey:
-    baseURL: https://surveys-api.hktester.com
+    baseURL: https://stg-survey-api.hktester.com/v1.0/
     surveyCookie: hk01_survey_token
