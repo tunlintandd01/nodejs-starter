@@ -1,0 +1,8 @@
+language: node_js
+
+service: docker
+
+before_install:
+  - dokcer build -t pascal/tech-stack .
+# script:
+# -
