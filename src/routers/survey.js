@@ -8,6 +8,7 @@ const { getControllerCallback } = require('../utils/route')
 const middlewares = require('../middlewares')
 
 router.get('getSurvey', '/survey')
+router.get('authPage', '/auth')
 
 router.use(middlewares.validateJSONSchema, getControllerCallback)
 
