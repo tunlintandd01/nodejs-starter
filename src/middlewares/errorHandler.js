@@ -31,6 +31,8 @@ module.exports = async (ctx, next) => {
   try {
     await next()
   } catch (error) {
+    console.error(error.stack)
+
     // handle custom error throw
     const customError = customErrorMapping[error.message]
     if (customError) {
