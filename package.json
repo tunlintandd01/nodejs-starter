@@ -6,6 +6,7 @@
   "dependencies": {
     "@hapi/boom": "^7.4.2",
     "ajv": "^6.10.0",
+    "ajv-merge-patch": "^4.1.0",
     "axios": "^0.18.0",
     "convict": "^5.0.0",
     "cookie": "^0.4.0",
